@@ -1,0 +1,108 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`applyTranslation from content to match snapshot 1`] = `
+Object {
+  "data": Object {
+    "blocks": Array [
+      Object {
+        "@type": "@builder.io/sdk:Element",
+        "component": Object {
+          "name": "Text",
+          "options": Object {
+            "text": "test",
+          },
+        },
+        "id": "block-id",
+        "meta": Object {
+          "transformed.text": "localized",
+          "translated": true,
+        },
+        "options": Object {
+          "text": Object {
+            "@type": "@builder.io/core:LocalizedValue",
+            "Default": "test",
+            "de": "german translatated",
+          },
+        },
+      },
+      Object {
+        "@type": "@builder.io/sdk:Element",
+        "component": Object {
+          "name": "Heading",
+          "options": Object {
+            "heading": Object {
+              "@type": "@builder.io/core:LocalizedValue",
+              "Default": "I am a heading!",
+              "de": "\\"german heading\\"",
+              "en-US": "en-us headings!",
+              "fr-FR": "french translated heading",
+            },
+            "subtitle": Object {
+              "@type": "@builder.io/core:LocalizedValue",
+              "Default": "I am a subtitle!",
+              "de": "german translated subtitle",
+              "en-US": "en-us subtitle!",
+              "fr-FR": "french translated subtitle",
+            },
+          },
+        },
+        "id": "builder-custom-component-id",
+        "meta": Object {
+          "localizedTextInputs": Array [
+            "heading",
+            "subtitle",
+          ],
+          "translated": true,
+        },
+      },
+    ],
+    "title": Object {
+      "@type": "@builder.io/core:LocalizedValue",
+      "Default": "Test",
+      "de": "hallo",
+      "en-US": "Hello",
+      "fr-FR": "salut",
+    },
+  },
+}
+`;
+
+exports[`applyTranslation from plain data model content to match snapshot 1`] = `
+Object {
+  "data": Object {
+    "title": Object {
+      "@type": "@builder.io/core:LocalizedValue",
+      "Default": "Test",
+      "de": "hallo",
+      "en-US": "Hello",
+      "fr-FR": "salut",
+    },
+  },
+}
+`;
+
+exports[`getTranslateableFields from content to match snapshot 1`] = `
+Object {
+  "blocks.block-id#text": Object {
+    "instructions": "This is a mobile only element",
+    "value": "test",
+  },
+  "blocks.builder-custom-component-id#heading": Object {
+    "instructions": "Visit https://builder.io/fiddle/... for more details",
+    "value": "en-us headings!",
+  },
+  "metadata.title": Object {
+    "instructions": "Visit https://builder.io/fiddle/... for more details",
+    "value": "Hello",
+  },
+}
+`;
+
+exports[`getTranslateableFields from plain data model content to match snapshot 1`] = `
+Object {
+  "metadata.title": Object {
+    "instructions": "Visit https://builder.io/fiddle/... for more details",
+    "value": "Hello",
+  },
+}
+`;

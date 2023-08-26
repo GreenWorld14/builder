@@ -1,0 +1,26 @@
+{
+  "name": "@e2e/gen1-react",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "tsc": "tsc",
+    "build": "tsc && vite build",
+    "serve": "vite preview"
+  },
+  "dependencies": {
+    "@builder.io/react": "workspace:*",
+    "@e2e/tests": "workspace:*",
+    "nx": "^16.6.0",
+    "nx-cloud": "^16.2.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.27",
+    "@types/react-dom": "^18.0.10",
+    "@vitejs/plugin-react": "^4.0.4",
+    "typescript": "^5.1.6",
+    "vite": "^4.4.8"
+  }
+}

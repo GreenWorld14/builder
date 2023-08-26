@@ -1,0 +1,34 @@
+{
+  "name": "@e2e/nuxt3",
+  "private": true,
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "serve": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "dependencies": {
+    "@builder.io/sdk-vue": "workspace:*",
+    "@e2e/tests": "workspace:*",
+    "nx": "^16.6.0",
+    "nx-cloud": "^16.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "^18",
+    "nuxt": "^3.5.2"
+  },
+  "installConfig": {
+    "hoistingLimits": "workspaces"
+  },
+  "nx": {
+    "targets": {
+      "build": {
+        "outputs": [
+          "{projectRoot}/.nuxt",
+          "{projectRoot}/.output"
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "pins" : [
+    {
+      "identity" : "builder-swift",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/BuilderIO/builder-swift",
+      "state" : {
+        "branch" : "shyam-custom-components",
+        "revision" : "d9b837ad5a3514c37f353971177d8f12aa95053d"
+      }
+    },
+    {
+      "identity" : "swiftyjson",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/SwiftyJSON/SwiftyJSON.git",
+      "state" : {
+        "revision" : "b3dcd7dbd0d488e1a7077cb33b00f2083e382f07",
+        "version" : "5.0.1"
+      }
+    }
+  ],
+  "version" : 2
+}

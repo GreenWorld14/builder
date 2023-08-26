@@ -1,0 +1,37 @@
+<span *ngIf="visible | async" class="builder-component-wrap">
+  <span *ngIf="!prerender">
+    <builder-blocks
+      field="blocks"
+      [key]="key"
+      [model]="model"
+      (click)="onClick($event)"
+      [prerender]="false"
+      [options]="options"
+    ></builder-blocks>
+  </span>
+  <span *ngIf="prerender">
+    <builder-content
+      [data]="data"
+      [hydrate]="hydrate"
+      [prerender]="prerender"
+      [content]="content"
+      [options]="options"
+      (click)="onClick($event)"
+      (contentLoad)="load.next($event)"
+      (contentError)="error.next($event)"
+      *builderModel="model; let content; let loading = loading; let meta = meta;"
+    >
+      <builder-blocks
+        *ngIf="content"
+        field="blocks"
+        [key]="key"
+        [model]="model"
+        [prerender]="prerender"
+        [options]="options"
+        [blocks]="content.blocks || content"
+        [breakpoints]="(content.meta && content.meta.breakpoints) || (meta && meta.breakpoints) || undefined"
+      ></builder-blocks>
+      <ng-content *ngIf="loading"></ng-content>
+    </builder-content>
+  </span>
+</span>

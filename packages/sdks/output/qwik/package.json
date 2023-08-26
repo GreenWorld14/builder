@@ -1,0 +1,57 @@
+{
+  "name": "@builder.io/sdk-qwik",
+  "version": "0.5.8",
+  "description": "Builder.io Qwik SDK",
+  "type": "module",
+  "main": "./lib/index.qwik.cjs",
+  "module": "./lib/index.qwik.mjs",
+  "qwik": "./lib/index.qwik.mjs",
+  "types": "./types/index.d.ts",
+  "files": [
+    "README.md",
+    "package.json",
+    "types-hacks.d.ts",
+    "types",
+    "lib"
+  ],
+  "exports": {
+    ".": {
+      "import": "./lib/index.qwik.mjs",
+      "require": "./lib/index.qwik.cjs"
+    }
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "build": "tsc && vite build --mode lib"
+  },
+  "devDependencies": {
+    "@builder.io/qwik": "^1.2.6",
+    "@types/node": "latest",
+    "nx": "^16.6.0",
+    "nx-cloud": "^16.2.0",
+    "typescript": "^5.1.6",
+    "vite": "^4.3.2"
+  },
+  "peerDependencies": {
+    "@builder.io/qwik": ">=1.0.0",
+    "undici": "^5.14.0"
+  },
+  "nx": {
+    "implicitDependencies": [
+      "@builder.io/sdks"
+    ],
+    "targets": {
+      "build": {
+        "dependsOn": [
+          "^build:qwik",
+          "^build"
+        ],
+        "outputs": [
+          "{projectRoot}/lib",
+          "{projectRoot}/types",
+          "{projectRoot}/dist"
+        ]
+      }
+    }
+  }
+}

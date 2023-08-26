@@ -1,0 +1,31 @@
+{
+  "name": "@builder.io/example-next-js-amp",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev-inspect": "env NODE_OPTIONS='--inspect' next dev",
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "@builder.io/react": "^2.0.4",
+    "@next/bundle-analyzer": "^10.2.3",
+    "cheerio": "^1.0.0-rc.10",
+    "next": "^13.1.6",
+    "next-seo": "^4.29.0",
+    "prettier": "^2.0.5",
+    "react": "^16.13.0",
+    "react-dom": "^16.13.0"
+  },
+  "prettier": {
+    "tabWidth": 2,
+    "useTabs": false,
+    "semi": true,
+    "singleQuote": true,
+    "jsxSingleQuote": false,
+    "jsxBracketSameLine": true,
+    "arrowParens": "always",
+    "parser": "typescript"
+  }
+}

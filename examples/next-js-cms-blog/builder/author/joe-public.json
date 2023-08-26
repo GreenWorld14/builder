@@ -1,0 +1,24 @@
+{
+  "@originContentId": "9f5ff76992e5728803af6f01398ee05000533636570b01c1f6371e4c37816646",
+  "@originModelId": "3098730fbcaefa49b9162259bb3c3c8ecf5dc34ed6bd86936187f22da1d613c0",
+  "@originOrg": "5ff84b57721a49c8890c6a7189c877ec",
+  "createdBy": "4FFFg0MNRJT0z0nW4uUizDHfHJV2",
+  "createdDate": 1613015350978,
+  "data": {
+    "image": "https://cdn.builder.io/api/v1/image/assets%2F8f6bae86bfa3487eb1a18f263118c832%2F6ae860242834453ea87d6057e7df9754",
+    "name": "Joe Public"
+  },
+  "id": "0a5ab9ce0b4844db9fb7b6dda7ac350c",
+  "lastUpdated": 1613031369279,
+  "lastUpdatedBy": "4FFFg0MNRJT0z0nW4uUizDHfHJV2",
+  "meta": {
+    "kind": "data"
+  },
+  "modelId": "4d541b8470c34c1580de997521d1e04b",
+  "name": "Joe Public",
+  "published": "published",
+  "query": [],
+  "rev": "gbmpwwq7z4e",
+  "testRatio": 1,
+  "variations": {}
+}
